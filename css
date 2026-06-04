@@ -1,0 +1,435 @@
+/* ===== SHADOWBORN VOID THEME FULL REPLICATION ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=UnifrakturCook:wght@700&display=swap');
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #0a0a0a url('') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Crimson Text', serif;
+    color: #b3001b;
+
+    display: flex;
+    flex-direction: row;
+
+    overflow-x: hidden;
+    overflow-y: auto; /* enables scrolling */
+}
+
+/* LEFT SIDEBAR */
+.sidebar {
+    width: 220px;
+    background: #0a0a0a;
+    border-right: 1px solid rgba(179, 0, 27, 0.4);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: inset 0 0 20px rgba(179, 0, 27, 0.2);
+}
+
+.sidebar .logo {
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 22px;
+    color: #b3001b;
+    text-shadow: 0 0 15px rgba(179, 0, 27, 0.7);
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #b3001b;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sidebar nav ul li:hover,
+.sidebar nav ul li.active {
+    background-color: rgba(179, 0, 27, 0.4);
+    box-shadow: 0 0 10px rgba(179, 0, 27, 0.7);
+}
+
+.sidebar nav ul li svg {
+    margin-right: 10px;
+    fill: #b3001b;
+}
+
+/* MAIN CONTENT AREA */
+.main-content {
+    flex: 1;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: transparent;
+}
+
+/* WELCOME TEXT */
+.welcome-text {
+    max-width: 600px;
+}
+
+.welcome-text small {
+    color: #7a1a1a;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.welcome-text h1 {
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 48px;
+    margin: 0 0 10px 0;
+    text-shadow: 0 0 20px rgba(179, 0, 27, 0.7);
+}
+
+.welcome-text p {
+    font-size: 16px;
+    color: #ccc;
+    max-width: 400px;
+    line-height: 1.4;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+/* SEARCH BAR */
+.search-bar {
+    margin: 20px 0;
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 14px 50px 14px 20px;
+    background: #0b0b0b;
+    border: 1px solid #3a0000;
+    border-radius: 14px;
+    color: #b3001b;
+    font-size: 16px;
+    font-family: 'Crimson Text', serif;
+    box-shadow:
+        0 0 15px rgba(179, 0, 27, 0.2),
+        inset 0 0 10px rgba(0, 0, 0, 0.8);
+    outline: none;
+}
+
+/* SHORTCUTS GRID */
+.shortcuts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    max-width: 100%;
+}
+
+.shortcut-tile {
+    background: linear-gradient(145deg, #0a0a0a, #050505);
+    border: 1px solid rgba(58, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 20px;
+    color: #b3001b;
+    text-align: center;
+    font-family: 'UnifrakturCook', cursive;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.8);
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shortcut-tile svg {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 8px;
+    fill: #b3001b;
+}
+
+.shortcut-tile:hover {
+    transform: scale(1.1);
+    box-shadow:
+        0 0 25px rgba(255, 40, 60, 0.8),
+        inset 0 0 15px rgba(255, 40, 60, 0.6);
+}
+
+/* RIGHT SIDE PANELS */
+.right-panels {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 40px 20px;
+}
+
+.panel {
+    background: linear-gradient(145deg, #0a0a0a, #050505);
+    border: 1px solid rgba(58, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 20px;
+    color: #b3001b;
+    font-family: 'Crimson Text', serif;
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    position: relative;
+}
+
+.panel h3 {
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 28px;
+    margin: 0 0 10px 0;
+    text-shadow: 0 0 20px rgba(179, 0, 27, 0.7);
+}
+
+.panel small {
+    color: #ccc;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+}
+
+/* WEATHER ICON */
+.weather-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #b3001b;
+}
+
+/* BOTTOM PANELS CONTAINER */
+.bottom-panels {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+}
+
+/* BOOKMARKS, NOW PLAYING, NOTES PANELS */
+.bottom-panel {
+    flex: 1;
+    background: linear-gradient(145deg, #0a0a0a, #050505);
+    border: 1px solid rgba(58, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 20px;
+    color: #b3001b;
+    font-family: 'Crimson Text', serif;
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.bottom-panel h4 {
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px rgba(179, 0, 27, 0.7);
+}
+
+.bottom-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bottom-panel ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.bottom-panel ul li svg {
+    margin-right: 10px;
+    fill: #b3001b;
+}
+
+.bottom-panel .now-playing img {
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    margin-right: 15px;
+}
+
+.bottom-panel .now-playing .track-info {
+    flex: 1;
+}
+
+.bottom-panel .now-playing .track-info h5 {
+    margin: 0 0 5px 0;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.bottom-panel .now-playing .track-info small {
+    color: #ccc;
+    font-size: 12px;
+}
+
+.bottom-panel .now-playing audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* NOTES TEXT */
+.bottom-panel .notes p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ccc;
+}
+
+/* BUTTONS AND ICONS */
+/* Add your SVG icons or font icons styling here */
+
+/* SCROLLBAR (if any) */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b3001b;
+    border-radius: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+    .shortcuts {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .bottom-panels {
+        flex-direction: column;
+    }
+    .right-panels {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.main-content {
+    flex: 1;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: transparent;
+
+    min-height: 100vh;   /* important */
+}
+.sidebar {
+    flex-shrink: 0;
+    height: auto;
+}
+
+.right-panels {
+    flex-shrink: 0;
+}
+.bottom-panels {
+    flex-wrap: wrap;
+}
+@media (max-width: 900px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+
+    .right-panels {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .shortcuts {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .bottom-panels {
+        flex-direction: column;
+    }
+}
+.search-bar svg {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    fill: #b3001b;
+    pointer-events: none;
+}
+.search-bar svg {
+    display: block;
+    background: transparent;
+}
+.search-bar {
+    position: relative;
+}
+/* ===== GLOBAL HOVER ANIMATION ===== */
+a {
+    transition: all 0.2s ease;
+}
+
+/* sidebar animation */
+.sidebar a {
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar a:hover {
+    background: rgba(179,0,27,0.15);
+    transform: translateX(6px);
+}
+
+/* subtle glow sweep effect */
+.sidebar a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,0,0,0.15), transparent);
+    transition: 0.5s;
+}
+
+.sidebar a:hover::after {
+    left: 100%;
+}
+
+/* shortcut hover upgrade */
+.shortcut {
+    transition: 0.25s ease;
+}
+
+.shortcut:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 15px rgba(179,0,27,0.25);
+}
