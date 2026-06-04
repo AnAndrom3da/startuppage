@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Shadowborn Void</title>
+
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+<!-- LEFT SIDEBAR -->
+<aside class="sidebar">
+
+<div class="logo">Shadowborn</div>
+
+<nav>
+<ul>
+
+<li class="active">
+<svg width="16" height="16" viewBox="0 0 24 24">
+<path d="M3 9.5L12 3l9 6.5v11a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 20.5v-11z"/>
+</svg>
+Home
+</li>
+
+<li>
+<a href="opera://bookmarks" target="_blank">
+<svg width="16" height="16" viewBox="0 0 24 24">
+<path d="M6 4h12v16H6z"/>
+</svg>
+Bookmarks
+</a>
+</li>
+
+<li>
+<a href="opera://history" target="_blank">
+<svg width="16" height="16" viewBox="0 0 24 24">
+<path d="M12 4v16"/>
+</svg>
+History
+</a>
+</li>
+
+<li>
+<a href="opera://configure/downloads" target="_blank">
+<svg width="16" height="16" viewBox="0 0 24 24">
+<path d="M4 12h16"/>
+</svg>
+Downloads
+</a>
+</li>
+
+<li>
+<a href="opera://settings" target="_blank">
+<svg width="16" height="16" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="3"/>
+</svg>
+Settings
+</a>
+</li>
+
+</ul>
+</nav>
+
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+<!-- WELCOME -->
+<section class="welcome-text">
+<small>Welcome back,</small>
+<h1>Shadowborn</h1>
+<p>From the darkest depths,<br />power is reborn.</p>
+</section>
+
+<!-- SEARCH -->
+<div class="search-bar">
+<input type="text" placeholder="Search the web..." />
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path fill="currentColor" d="M21 21l-4.35-4.35m1.35-5.65a7 7 0 1 1-14 0 7 7 0 0 1 14 0z"/>
+</svg>
+</div>
+
+<!-- SHORTCUTS -->
+<section class="shortcuts">
+
+<a class="shortcut-tile" href="https://youtube.com" target="_blank">
+<svg viewBox="0 0 24 24"><path d="M10 15l5-3-5-3z"/></svg>
+YouTube
+</a>
+
+<a class="shortcut-tile" href="https://reddit.com" target="_blank">
+<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/></svg>
+Reddit
+</a>
+
+<a class="shortcut-tile" href="https://twitter.com" target="_blank">
+<svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg>
+Twitter
+</a>
+
+<a class="shortcut-tile" href="https://discord.com" target="_blank">
+<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16"/></svg>
+Discord
+</a>
+
+<a class="shortcut-tile" href="https://netflix.com" target="_blank">
+<svg viewBox="0 0 24 24"><path d="M3 3h18v18H3z"/></svg>
+Netflix
+</a>
+
+<a class="shortcut-tile" href="https://twitch.tv" target="_blank">
+<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/></svg>
+Twitch
+</a>
+
+<a class="shortcut-tile" href="https://mail.google.com" target="_blank">
+<svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg>
+Gmail
+</a>
+
+<a class="shortcut-tile" href="#" target="_blank">
+<svg viewBox="0 0 24 24"><path d="M12 4v16"/></svg>
+Add Shortcut
+</a>
+
+</section>
+
+</main>
+
+<!-- RIGHT PANEL -->
+<aside class="right-panels">
+
+<div class="panel time-date">
+<h3 id="time">00:00</h3>
+<small id="date">Tuesday, May 27</small>
+</div>
+
+<div class="panel weather">
+<div class="weather-icon">🌙</div>
+<h3>18°</h3>
+<small>Partly Cloudy<br/>The night remains</small>
+</div>
+
+</aside>
+
+<script>
+function updateTime(){
+const now = new Date();
+document.getElementById("time").textContent =
+now.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+document.getElementById("date").textContent =
+now.toDateString();
+}
+setInterval(updateTime,1000);
+updateTime();
+</script>
+
+</body>
+</html>
